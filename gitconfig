@@ -1,0 +1,6 @@
+[user]
+	name = adam4130
+	email = adam4130@users.noreply.github.com
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore

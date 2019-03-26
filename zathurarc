@@ -1,0 +1,11 @@
+# Zathura config file (~/.config/zathura/zathurarc)
+
+# General 
+map w adjust_window width
+set adjust_open width
+set window-width 960
+set window-height 1020
+set statusbar-home-tilde true
+
+# Copy to clipboard
+set selection-clipboard clipboard
