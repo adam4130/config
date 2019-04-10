@@ -10,6 +10,10 @@ ln -sf $CONFIGDIR/gitconfig ~/.gitconfig
 mkdir -p ~/.vim/undodir
 ln -sf $CONFIGDIR/vimrc ~/.vimrc
 
+# XORG
+ln -sf $CONFIGDIR/xinitrc ~/.xinitrc
+
 # Zathura PDF Viewer
 mkdir -p ~/.config/zathura
 ln -sf $CONFIGDIR/zathurarc ~/.config/zathura/zathurarc
+

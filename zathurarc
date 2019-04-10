@@ -1,8 +1,10 @@
 # Zathura config file (~/.config/zathura/zathurarc)
 
 # General 
+map p print
+map r reload
+map R rotate
 map w adjust_window width
-set adjust_open width
 set statusbar-home-tilde true
 
 # Copy to clipboard
