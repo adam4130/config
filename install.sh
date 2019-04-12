@@ -8,12 +8,6 @@ ln -sf $CONFIGDIR/gitconfig ~/.gitconfig
 
 # Vim
 mkdir -p ~/.vim/undodir
+mkdir -p ~/.vim/colors
+cp $CONFIGDIR/gruvbox.vim ~/.vim/colors
 ln -sf $CONFIGDIR/vimrc ~/.vimrc
-
-# XORG
-ln -sf $CONFIGDIR/xinitrc ~/.xinitrc
-
-# Zathura PDF Viewer
-mkdir -p ~/.config/zathura
-ln -sf $CONFIGDIR/zathurarc ~/.config/zathura/zathurarc
-

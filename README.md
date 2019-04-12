@@ -1,2 +1,2 @@
 # config
-Installs basic config files for GitHub, Vim, and Zathura.
+Basic config files and install script for Gentoo, GitHub, and Vim.

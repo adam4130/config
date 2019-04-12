@@ -2,46 +2,43 @@
  
 set nocompatible
 
+filetype plugin on 
+filetype indent on 
+
+syntax on 
+colorscheme gruvbox
+
 " General 
-syntax on " enable syntax highlighting
 set title
 set number
 set relativenumber 
-set textwidth=80
-set mouse=a      " select text without line numbers
-set history=1000 " :cmdline history
-set spell        " spell check
+set history=500
+set spell        
 
 " Auto completion
 set wildmenu
 set wildmode=list:longest,full
 
-" Indentation
-filetype indent plugin on " auto indenting by file type
-set autoindent
-set smartindent
-
-" Tabs
-set tabstop=2
-set shiftwidth=2
-set expandtab " tabs are spaces
+" Tabs and indentation
+set tabstop=4
+set shiftwidth=4
+set expandtab
 set smarttab
+set autoindent
 
 " Searching
-set incsearch  " search as characters are entered
-set hlsearch   " highlight matches
-set ignorecase " case-insensitive
-set smartcase 
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+nnoremap i :noh<cr>i
 
 " Switch to normal mode
-inoremap jk <Esc>
+" inoremap jk <Esc>
 
 " Move cursor independent of text wrap
 nnoremap j gj
 nnoremap k gk
-
-" Turn off search highlighting 
-nnoremap i :noh<cr>i
 
 " Persistent undo (expects ~/.vim/undodir already exists)
 set undodir=~/.vim/undodir
