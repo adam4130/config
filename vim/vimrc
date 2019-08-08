@@ -1,0 +1,52 @@
+set nocompatible
+
+syntax enable
+colorscheme desert
+
+filetype plugin indent on
+
+" General 
+set title
+set ruler
+set number
+set relativenumber
+set wildmenu
+set showmatch
+set lazyredraw
+set mouse=a
+set clipboard=unnamedplus
+
+" Searching
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+nnoremap i :noh<cr>i
+
+" Tabs and indentation
+set tabstop=8
+set shiftwidth=4
+set expandtab
+set softtabstop=4
+set shiftround
+
+" Move cursor independent of text wrap
+nnoremap j gj
+nnoremap k gk
+
+" Insert single character before cursor
+nnoremap <Space> i_<Esc>r
+
+" Switch to normal mode
+" inoremap jk <Esc>
+
+" Spelling (requires ~/.vim/spell to already exist)
+set spell spelllang=en_us
+set spellfile=~/.vim/spell/en.utf-8.add
+
+" Persistent undo (requires ~/.vim/undodir to already exist)
+set undodir=~/.vim/undodir
+set undofile
+
+" Jump to last known cursor position
+au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
