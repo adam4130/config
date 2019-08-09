@@ -2,12 +2,30 @@
 
 CONFIGDIR="$(dirname "$(realpath $0)")"
 
+#-------------------------------------------------------------------------------
 # GitHub
+#-------------------------------------------------------------------------------
+
 ln -sf $CONFIGDIR/git/gitignore ~/.gitignore
 ln -sf $CONFIGDIR/git/gitconfig ~/.gitconfig
 
+#-------------------------------------------------------------------------------
 # Vim
-mkdir -p ~/.vim/undodir
-mkdir -p ~/.vim/spell
+#-------------------------------------------------------------------------------
+
 ln -sf $CONFIGDIR/vim/vimrc ~/.vimrc
-ln -sf $CONFIGDIR/vim/en.utf-8.add ~/.vim/spell/en.utf-8.add
+
+# Color scheme
+COLORDIR=~/.vim/colors
+COLORFILE=afterglow.vim
+mkdir -p $COLORDIR
+cp $CONFIGDIR/vim/$COLORFILE $COLORDIR/$COLORFILE
+
+# Spell check
+SPELLDIR=~/.vim/spell
+SPELLFILE=en.utf-8.add
+mkdir -p $SPELLDIR
+ln -sf $CONFIGDIR/vim/$SPELLFILE $SPELLDIR/$SPELLFILE
+
+# Persistent undo
+mkdir -p ~/.vim/undodir

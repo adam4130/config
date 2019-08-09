@@ -1,3 +1,5 @@
 cmake
 README
 Navier
+namespace
+discretize

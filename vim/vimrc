@@ -1,9 +1,10 @@
 set nocompatible
 
-syntax enable
-colorscheme desert
-
 filetype plugin indent on
+
+" Color scheme
+syntax on
+colorscheme afterglow
 
 " General 
 set title
