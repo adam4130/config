@@ -13,13 +13,11 @@ ln -sf $CONFIGDIR/git/gitconfig ~/.gitconfig
 # Vim
 #-------------------------------------------------------------------------------
 
-ln -sf $CONFIGDIR/vim/vimrc ~/.vimrc
-
 # Color scheme
-COLORDIR=~/.vim/colors
-COLORFILE=afterglow.vim
-mkdir -p $COLORDIR
-cp $CONFIGDIR/vim/$COLORFILE $COLORDIR/$COLORFILE
+if [ ! -x /usr/bin/curl ] ; then
+    echo "Error: Please install curl" >&2
+    exit 1 
+fi
 
 # Spell check
 SPELLDIR=~/.vim/spell
@@ -29,3 +27,5 @@ ln -sf $CONFIGDIR/vim/$SPELLFILE $SPELLDIR/$SPELLFILE
 
 # Persistent undo
 mkdir -p ~/.vim/undodir
+
+ln -sf $CONFIGDIR/vim/vimrc ~/.vimrc

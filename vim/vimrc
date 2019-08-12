@@ -3,10 +3,21 @@ set nocompatible
 filetype plugin indent on
 
 " Color scheme
-syntax on
-colorscheme afterglow
+if empty(glob('~/.vim/autoload/plug.vim'))
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-" General 
+call plug#begin('~/.vim/plugged')
+Plug 'morhetz/gruvbox'
+call plug#end()
+
+syntax on
+colorscheme gruvbox
+set background=dark
+
+" General
 set title
 set ruler
 set number
@@ -44,6 +55,7 @@ nnoremap <Space> i_<Esc>r
 " Spelling (requires ~/.vim/spell to already exist)
 set spell spelllang=en_us
 set spellfile=~/.vim/spell/en.utf-8.add
+hi SpellBad cterm=underline
 
 " Persistent undo (requires ~/.vim/undodir to already exist)
 set undodir=~/.vim/undodir
