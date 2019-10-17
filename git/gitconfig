@@ -3,4 +3,4 @@
 	email = adam4130@users.noreply.github.com
 [core]
 	editor = vim
-	excludesfile = ~/.gitignore
+	excludesfile = /home/adam/.gitignore

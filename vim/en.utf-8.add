@@ -3,3 +3,5 @@ README
 Navier
 namespace
 discretize
+MPI
+OpenMP
