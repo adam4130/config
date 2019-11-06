@@ -49,3 +49,8 @@ cabal.project.local
 cabal.project.local~
 .HTF/
 .ghc.environment.*
+
+# IDE
+**/nbproject/private/
+nbbuild/
+build/
