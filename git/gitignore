@@ -50,7 +50,12 @@ cabal.project.local~
 .HTF/
 .ghc.environment.*
 
-# IDE
+# Netbeans
 **/nbproject/private/
 nbbuild/
 build/
+
+# Eclipse
+.settings/
+.classpath
+.project
