@@ -1,2 +1,2 @@
 # config
-Basic config files and install script for Gentoo, GitHub, and Vim.
+Config files for Gentoo, NixOs, and Git, Neovim.

@@ -1,31 +1,27 @@
-#!/bin/bash
+#!/bin/sh
 
 CONFIGDIR="$(dirname "$(realpath $0)")"
+NIXOSDIR=/etc/nixos
+
+#-------------------------------------------------------------------------------
+# NixOS
+#-------------------------------------------------------------------------------
+
+sudo cp $CONFIGDIR/nix/configuration.nix $NIXOSDIR
+sudo cp $CONFIGDIR/nix/neovim.nix $NIXOSDIR
+sudo nixos-rebuild switch
 
 #-------------------------------------------------------------------------------
 # GitHub
 #-------------------------------------------------------------------------------
 
-ln -sf $CONFIGDIR/git/gitignore ~/.gitignore
-ln -sf $CONFIGDIR/git/gitconfig ~/.gitconfig
+cp $CONFIGDIR/git/gitignore ~/.gitignore
+cp $CONFIGDIR/git/gitconfig ~/.gitconfig
 
 #-------------------------------------------------------------------------------
 # Vim
 #-------------------------------------------------------------------------------
 
-# Color scheme
-if [ ! -x /usr/bin/curl ] ; then
-    echo "Error: Please install curl" >&2
-    exit 1 
-fi
-
-# Spell check
-SPELLDIR=~/.vim/spell
-SPELLFILE=en.utf-8.add
-mkdir -p $SPELLDIR
-ln -sf $CONFIGDIR/vim/$SPELLFILE $SPELLDIR/$SPELLFILE
-
 # Persistent undo
-mkdir -p ~/.vim/undodir
+mkdir -p ~/.config/nvim/undodir
 
-ln -sf $CONFIGDIR/vim/vimrc ~/.vimrc

@@ -6,7 +6,7 @@
 *.o
 *.so
 
-# Temporary files 
+# Temporary files
 *.swp
 *.swo
 *~
