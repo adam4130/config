@@ -7,10 +7,8 @@ neovim.override {
       filetype plugin indent on
 
       " Syntax highlighting
-      syntax enable
-      colorscheme neodark
-      set background=dark
       set termguicolors
+      colorscheme iceberg
 
       " General
       set number
@@ -53,7 +51,7 @@ neovim.override {
     '';
 
     packages.myVimPackage = with pkgs.vimPlugins; {
-      start = [ airline neodark-vim ];
+      start = [ iceberg-vim airline ];
       opt = [ ];
     };
   };
