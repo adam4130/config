@@ -62,9 +62,13 @@
     keepassxc
     neofetch
     okular
+    openvpn
     swiProlog
     texlive.combined.scheme-basic
+    unzip
     qbittorrent
+    vlc
+    zip
     (import ./neovim.nix)
   ];
 
