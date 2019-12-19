@@ -59,12 +59,15 @@
     gcc
     ghc
     git
+    gwenview
     keepassxc
     neofetch
+    octaveFull
     okular
     openvpn
+    spectacle
     swiProlog
-    texlive.combined.scheme-basic
+    texlive.combined.scheme-full
     unzip
     qbittorrent
     vlc
