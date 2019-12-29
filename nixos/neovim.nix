@@ -48,10 +48,19 @@ neovim.override {
 
       " Delete trailing whitespace
       autocmd BufWritePre * %s/\s\+$//e
+
+      " Deoplete completion
+      let g:deoplete#enable_at_startup = 1
+      inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
     '';
 
-    packages.myVimPackage = with pkgs.vimPlugins; {
-      start = [ iceberg-vim airline ];
+    packages.vimPackage = with pkgs.vimPlugins; {
+      start = [
+        airline
+        auto-pairs
+        deoplete-nvim
+        iceberg-vim
+      ];
       opt = [ ];
     };
   };

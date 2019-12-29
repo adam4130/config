@@ -7,8 +7,8 @@ NIXOSDIR=/etc/nixos
 # NixOS
 #-------------------------------------------------------------------------------
 
-sudo cp $CONFIGDIR/nix/configuration.nix $NIXOSDIR
-sudo cp $CONFIGDIR/nix/neovim.nix $NIXOSDIR
+sudo cp $CONFIGDIR/nixos/configuration.nix $NIXOSDIR
+sudo cp $CONFIGDIR/nixos/neovim.nix $NIXOSDIR
 sudo nixos-rebuild switch
 
 #-------------------------------------------------------------------------------
