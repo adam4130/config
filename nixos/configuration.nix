@@ -53,7 +53,6 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    cabal-install
     curl
     eclipses.eclipse-java
     firefox
@@ -69,12 +68,13 @@
     okular
     spectacle
     swiProlog
-    texlive.combined.scheme-full
+    texlive.combined.scheme-small
     unzip
     qbittorrent
     vlc
     zip
     (import ./neovim.nix)
+    (python3.withPackages(ps: with ps; [ scikitlearn ]))
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -118,7 +118,6 @@
     home = "/home/adam";
     extraGroups = [ "wheel" "networkmanager" "video" ];
   };
-
 
   # This value determines the NixOS release with which your system is to be
   # compatible, in order to avoid breaking some software such as database

@@ -8,7 +8,9 @@ neovim.override {
 
       " Syntax highlighting
       set termguicolors
-      colorscheme iceberg
+      set background=dark
+      let g:one_allow_italics = 1
+      colorscheme one
 
       " General
       set number
@@ -59,7 +61,7 @@ neovim.override {
         airline
         auto-pairs
         deoplete-nvim
-        iceberg-vim
+        vim-one
       ];
       opt = [ ];
     };
