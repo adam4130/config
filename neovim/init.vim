@@ -34,8 +34,8 @@ nnoremap i :noh<cr>i
 set expandtab
 set autoindent
 set smartindent
-set shiftwidth=2
-set softtabstop=2
+set shiftwidth=4
+set softtabstop=4
 
 " Insert single character before cursor
 nnoremap <Space> i_<Esc>r
