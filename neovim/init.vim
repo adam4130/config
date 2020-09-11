@@ -5,7 +5,6 @@ call plug#begin()
 Plug 'vim-airline/vim-airline'
 Plug 'shougo/deoplete.nvim'
 Plug 'jiangmiao/auto-pairs'
-Plug 'preservim/nerdtree'
 Plug 'rakr/vim-one'
 call plug#end()
 
@@ -48,8 +47,8 @@ nnoremap k gk
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
 " Persistent undo
-set undodir=~/.config/nvim/undodir
 set undofile
+set undodir=~/.config/nvim/undodir
 
 " Delete trailing whitespace
 autocmd BufWritePre * %s/\s\+$//e
